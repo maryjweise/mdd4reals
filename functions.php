@@ -259,3 +259,4 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+require_once 'lib/custom/custom-functions.php';
