@@ -520,6 +520,10 @@ i {
 	font-style: italic;
 }
 
+i.fa {
+	color: #ff0090;
+}
+
 mark {
 	background: #ddd;
 	color: #333;
@@ -1190,6 +1194,8 @@ th:first-child {
 		position: fixed;
 		width: 100%;
 		z-index: 9999;
+		transition: ease 0.3s all;
+		border-bottom: 5px solid #ff0090;
 	}
 	.title-area {
 		padding-bottom: 25px;
@@ -1210,10 +1216,15 @@ th:first-child {
 	.site-description {
 		font-size: 30px;
 	}
+	.shrink {
+		background-image: url("//192.168.56.1:8080/wp-content/uploads/2019/03/website-header-binary-pineapple-white.png");
+		background-color: #7DC9A4;
+		background-position: center 80%;
+	}
 	.shrink .title-area {
 		padding-top: 15px;
 		padding-bottom: 0px;
-		background-color: #7DC9A4;
+		background-color: transparent;
 		background-image: none;
 	}
 	.shrink .site-title {
@@ -1357,6 +1368,7 @@ th:first-child {
 	width: 100%;
 	background-color: #7DC9A4;
 	color: white;
+	transition: ease 0.3s all;
 }
 
 @media only screen and (min-width: 960px) {
@@ -1376,6 +1388,25 @@ th:first-child {
 		padding-left: 15px;
 		padding-right: 15px;
 		color: white;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.nav-primary .genesis-nav-menu .sub-menu {
+		border: 0px;
+	}
+	.nav-primary .genesis-nav-menu .sub-menu a {
+		background-color: #7DC9A4;
+		border: 0px;
+		color: white;
+	}
+	.nav-primary .genesis-nav-menu .sub-menu a:hover, .nav-primary .genesis-nav-menu .sub-menu a:focus {
+		color: #ff0090;
+	}
+	.nav-primary .genesis-nav-menu .current-page-parent > a, .nav-primary .genesis-nav-menu .current-menu-item > a {
+		color: #ff0090;
+	}
+	.shrink .nav-primary {
+		background-color: transparent;
 	}
 }
 
@@ -1518,12 +1549,15 @@ th:first-child {
 	.home .site-inner .content .home-slider .widget {
 		margin-bottom: 0px;
 	}
-	.home .site-inner .content .home-about,
+	.home .site-inner .content .home-about .wrap,
 	.home .site-inner .content .home-services,
 	.home .site-inner .content .service-categories,
 	.home .site-inner .content .home-blog {
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+	.home .site-inner .content .home-about {
+		background-color: #fafafa;
 	}
 	.home .site-inner .content .home-about .wrap {
 		display: -ms-flexbox;
@@ -1542,7 +1576,7 @@ th:first-child {
 		border-radius: 50%;
 	}
 	.home .site-inner .content .home-services {
-		margin-top: 30px;
+		margin-top: 60px;
 	}
 	.home .site-inner .content .home-services .wrap {
 		display: -ms-flexbox;
@@ -1559,23 +1593,79 @@ th:first-child {
 		padding-right: 10px;
 		margin-right: 10px;
 		border-right: 2px solid #ff0090;
+		font-size: 32px;
+	}
+	.home .site-inner .content .home-services #text-7 p {
 		font-size: 24px;
 	}
-	.home .site-inner .content .home-services #text-8 {
+	.home .site-inner .content .home-services #text-8,
+	.home .site-inner .content .home-services #text-9,
+	.home .site-inner .content .home-services #text-10 {
 		width: 30%;
 		text-align: center;
 	}
 	.home .site-inner .content .home-services #text-9 {
-		width: 30%;
 		padding: 0 2%;
 		margin: 0 2%;
 		border-left: 2px solid #ff0090;
 		border-right: 2px solid #ff0090;
-		text-align: center;
 	}
-	.home .site-inner .content .home-services #text-10 {
-		width: 30%;
-		text-align: center;
+	.home .site-inner .content .home-blog .widget-title {
+		text-transform: uppercase;
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: 2px solid #ff0090;
+		font-size: 32px;
+		display: inline;
+		margin-bottom: 20px;
+	}
+	.home .site-inner .content .home-blog .rpwe-block {
+		margin-top: 40px;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li {
+		-ms-flex-preferred-size: calc(50% - 40px);
+		    flex-basis: calc(50% - 40px);
+		margin-bottom: 40px;
+		position: relative;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li:nth-child(odd) {
+		margin-right: 40px;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li img {
+		float: left;
+		margin-right: 15px;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li h3 {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li h3 a {
+		text-decoration: none;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li .rpwe-summary {
+		font-size: 14px;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li .more-link {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		text-decoration: none;
+		border: 1px solid #ff0090;
+		padding: 6px 10px;
+		margin: 1px;
+		transition: ease 0.2s all;
+	}
+	.home .site-inner .content .home-blog .rpwe-ul li .more-link:hover, .home .site-inner .content .home-blog .rpwe-ul li .more-link:focus {
+		border: 2px solid #ff0090;
+		margin: 0;
+		text-decoration: none;
+		color: #ff0090;
 	}
 }
 

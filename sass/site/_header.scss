@@ -63,7 +63,8 @@
 		position: fixed;
 		width: 100%;
 		z-index: 9999;
-                
+                transition: ease 0.3s all;
+                border-bottom:5px solid $pink;
 	}
         
         .title-area {
@@ -86,10 +87,14 @@
             font-size:30px;
         }
         .shrink {
+            
+            background-image:url('//192.168.56.1:8080/wp-content/uploads/2019/03/website-header-binary-pineapple-white.png');
+            background-color:$green;
+            background-position:center 80%;
             .title-area {
                 padding-top:15px;
                 padding-bottom:0px;
-                background-color:$green;
+                background-color:transparent;
                 background-image:none;
             }
             .site-title {
@@ -106,5 +111,6 @@
                 height:0px;
                 font-size:16px;
             }
+            
         }
 }

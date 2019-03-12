@@ -6,6 +6,7 @@
 	width: 100%;
         background-color:$green;
         color:white;
+        transition: ease 0.3s all;
 }
 
 @media only screen and (min-width: 960px) {
@@ -25,8 +26,35 @@
                         padding-left: 15px;
                         padding-right: 15px;
                         color:white;
+                        font-weight:600;
+                        text-transform:uppercase;
                     }
+                    
+                    .sub-menu {
+                        border:0px;
+                        
+                        a {
+                            background-color:$green;
+                            border:0px;
+                            color:white;
+                            
+                            &:hover, 
+                                &:focus {
+                                color:$pink;
+                            }
+                        }
+                        
+                    }
+                    
+                    .current-page-parent > a, .current-menu-item > a{
+                            color:$pink;
+                        }
                 }
 	}
+        .shrink .nav-primary {
+
+                background-color:transparent;
+
+        }
 
 }
