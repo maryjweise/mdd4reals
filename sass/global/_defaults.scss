@@ -25,7 +25,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease;
 }
 
 a {
@@ -272,19 +272,29 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
-	border: 0;
-	border-radius: 5px;
-	color: #fff;
+	background-color: white;
+	border: 2px solid $pink;
+	border-radius: 0px;
+	color: $pink;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
 	width: auto;
+        font-family:$display-font-stack;
+        text-transform:uppercase;
+        margin:4px;
+        
+        &.highlight {
+            background-color:$pink;
+            color:white;
+            
+        }
 }
+
 
 button:focus,
 button:hover,
@@ -296,8 +306,13 @@ input[type="submit"]:focus,
 input[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
+	background-color: $pink;
 	color: #fff;
+        
+        &.highlight{
+            border:4px solid $pink;
+            margin:2px;
+        }
 }
 
 .entry-content .button:focus,

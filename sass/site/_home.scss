@@ -1,0 +1,101 @@
+@media only screen and (min-width: 960px) {
+
+    .home {
+        .site-inner {
+            max-width:100%;
+            padding: 0;
+
+            .content {
+                float:none;
+                width:100%;
+
+                .home-slider {
+                    .widget{
+                        margin-bottom:0px;
+                    }
+                }
+
+                .home-about,
+                .home-services,
+                .service-categories,
+                .home-blog,
+                {
+                    max-width:1200px;
+                    margin: 0 auto;
+                }
+
+                .home-about {
+                    .wrap {
+                        display:flex;
+                        padding-top:40px;
+                    }
+                    
+                    #custom_html-4 {
+                        max-width:75%;
+                        
+                        
+                        
+                    }
+                    #media_image-2 {
+                        max-width:25%;
+                        padding-left:20px;
+                        
+                        img {
+                            width:100%;
+                            border-radius:50%;
+                            
+                        }
+                    }
+                }
+                
+                .home-services {
+                    
+                    margin-top:30px;
+                    
+                    .wrap {
+                        display:flex;
+                        flex-wrap:wrap;
+                    }
+                    
+                    #text-7 { //Title
+                        
+                        width:100%;
+                        
+                        .widget-title {
+                            float:left;
+                            text-transform:uppercase;
+                            padding-right: 10px;
+                            margin-right:10px;
+                            border-right: 2px solid $pink;
+                            font-size:32px;
+                        }
+                        p {
+                            font-size:24px;
+                        }
+                        
+                    }
+                    #text-8,        //Fresh Start
+                    #text-9,        //Level Up
+                    #text-10{       //Cultivate
+                        width:30%;
+                        text-align:center;
+                    }
+                    
+                    #text-9 { 
+                        padding: 0 2%;
+                        margin:0 2%;
+                        border-left:2px solid $pink;
+                        border-right:2px solid $pink;
+
+                    }
+                    .button {
+                        position:
+                    }
+
+                    
+                }
+
+            }
+        }
+    }
+}

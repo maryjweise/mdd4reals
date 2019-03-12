@@ -470,7 +470,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease;
 }
 
 a {
@@ -718,18 +718,30 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
-	border: 0;
-	border-radius: 5px;
-	color: #fff;
+	background-color: white;
+	border: 2px solid #ff0090;
+	border-radius: 0px;
+	color: #ff0090;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
 	width: auto;
+	font-family: "Century Gothic", Verdana, Geneva, sans-serif;
+	text-transform: uppercase;
+	margin: 4px;
+}
+
+button.highlight,
+input[type="button"].highlight,
+input[type="reset"].highlight,
+input[type="submit"].highlight,
+.button.highlight {
+	background-color: #ff0090;
+	color: white;
 }
 
 button:focus,
@@ -742,8 +754,22 @@ input[type="submit"]:focus,
 input[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
+	background-color: #ff0090;
 	color: #fff;
+}
+
+button:focus.highlight,
+button:hover.highlight,
+input[type="button"]:focus.highlight,
+input[type="button"]:hover.highlight,
+input[type="reset"]:focus.highlight,
+input[type="reset"]:hover.highlight,
+input[type="submit"]:focus.highlight,
+input[type="submit"]:hover.highlight,
+.button:focus.highlight,
+.button:hover.highlight {
+	border: 4px solid #ff0090;
+	margin: 2px;
 }
 
 .entry-content .button:focus,
@@ -1480,6 +1506,79 @@ th:first-child {
 /*------------------------------------------------------------------------------
 # Home
 ------------------------------------------------------------------------------*/
+@media only screen and (min-width: 960px) {
+	.home .site-inner {
+		max-width: 100%;
+		padding: 0;
+	}
+	.home .site-inner .content {
+		float: none;
+		width: 100%;
+	}
+	.home .site-inner .content .home-slider .widget {
+		margin-bottom: 0px;
+	}
+	.home .site-inner .content .home-about,
+	.home .site-inner .content .home-services,
+	.home .site-inner .content .service-categories,
+	.home .site-inner .content .home-blog {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.home .site-inner .content .home-about .wrap {
+		display: -ms-flexbox;
+		display: flex;
+		padding-top: 40px;
+	}
+	.home .site-inner .content .home-about #custom_html-4 {
+		max-width: 75%;
+	}
+	.home .site-inner .content .home-about #media_image-2 {
+		max-width: 25%;
+		padding-left: 20px;
+	}
+	.home .site-inner .content .home-about #media_image-2 img {
+		width: 100%;
+		border-radius: 50%;
+	}
+	.home .site-inner .content .home-services {
+		margin-top: 30px;
+	}
+	.home .site-inner .content .home-services .wrap {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.home .site-inner .content .home-services #text-7 {
+		width: 100%;
+	}
+	.home .site-inner .content .home-services #text-7 .widget-title {
+		float: left;
+		text-transform: uppercase;
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: 2px solid #ff0090;
+		font-size: 24px;
+	}
+	.home .site-inner .content .home-services #text-8 {
+		width: 30%;
+		text-align: center;
+	}
+	.home .site-inner .content .home-services #text-9 {
+		width: 30%;
+		padding: 0 2%;
+		margin: 0 2%;
+		border-left: 2px solid #ff0090;
+		border-right: 2px solid #ff0090;
+		text-align: center;
+	}
+	.home .site-inner .content .home-services #text-10 {
+		width: 30%;
+		text-align: center;
+	}
+}
+
 /*------------------------------------------------------------------------------
 # Content
 ------------------------------------------------------------------------------*/

@@ -14,6 +14,7 @@ wp_enqueue_script(
 		CHILD_THEME_VERSION,
 		true
 	);
+wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.7.2/css/all.css');
 }
  
 add_action( 'wp_enqueue_scripts', 'mdd_enqueue_scrips_styles' );
