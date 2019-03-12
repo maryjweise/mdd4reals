@@ -4,6 +4,8 @@
 	padding-bottom: 15px;
 	padding-top: 15px;
 	width: 100%;
+        background-color:$green;
+        color:white;
 }
 
 @media only screen and (min-width: 960px) {
@@ -13,17 +15,18 @@
 
 	.nav-primary {
 		clear: none;
-		max-width:1200px;
                 margin:0px auto;
+                
+                .genesis-nav-menu {
+                    display:flex;
+                    justify-content: center;
+                    
+                    a {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        color:white;
+                    }
+                }
 	}
-        
-        #menu-main {
-            display:flex;
-            justify-content: center;
-        }
 
-	.nav-primary .genesis-nav-menu a {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
 }

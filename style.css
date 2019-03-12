@@ -1104,7 +1104,7 @@ th:first-child {
 .site-header {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-	padding: 0 30px;
+	padding: 0;
 }
 
 /* Title Area
@@ -1137,7 +1137,7 @@ th:first-child {
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: #ff0090;
 	text-decoration: none;
 }
 
@@ -1166,11 +1166,15 @@ th:first-child {
 		z-index: 9999;
 	}
 	.title-area {
-		padding-bottom: 10px;
-		max-width: 800px;
+		padding-bottom: 25px;
+		max-width: 100%;
 		margin: 0px auto;
 		text-align: center;
 		float: none;
+		transition: ease 0.3s all;
+		background-image: url("//192.168.56.1:8080/wp-content/uploads/2019/03/website-header-binary-pineapple.jpg");
+		background-size: cover;
+		background-position: bottom;
 	}
 	.site-title {
 		font-size: 48px;
@@ -1183,10 +1187,15 @@ th:first-child {
 	.shrink .title-area {
 		padding-top: 15px;
 		padding-bottom: 0px;
+		background-color: #7DC9A4;
+		background-image: none;
 	}
 	.shrink .site-title {
 		font-size: 30px;
 		margin-bottom: 0px;
+	}
+	.shrink .site-title a {
+		color: white;
 	}
 	.shrink .site-description {
 		opacity: 0;
@@ -1320,6 +1329,8 @@ th:first-child {
 	padding-bottom: 15px;
 	padding-top: 15px;
 	width: 100%;
+	background-color: #7DC9A4;
+	color: white;
 }
 
 @media only screen and (min-width: 960px) {
@@ -1327,10 +1338,9 @@ th:first-child {
 	--------------------------------------------- */
 	.nav-primary {
 		clear: none;
-		max-width: 1200px;
 		margin: 0px auto;
 	}
-	#menu-main {
+	.nav-primary .genesis-nav-menu {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-pack: center;
@@ -1339,6 +1349,7 @@ th:first-child {
 	.nav-primary .genesis-nav-menu a {
 		padding-left: 15px;
 		padding-right: 15px;
+		color: white;
 	}
 }
 

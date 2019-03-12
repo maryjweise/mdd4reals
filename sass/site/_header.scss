@@ -1,7 +1,7 @@
 .site-header {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-	padding: 0 30px;
+	padding: 0;
 }
 
 /* Title Area
@@ -35,7 +35,7 @@
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: $pink;
 	text-decoration: none;
 }
 
@@ -63,14 +63,19 @@
 		position: fixed;
 		width: 100%;
 		z-index: 9999;
+                
 	}
         
         .title-area {
-            padding-bottom:10px;
-            max-width:800px;
+            padding-bottom:25px;
+            max-width:100%;
             margin:0px auto;
             text-align:center;
             float:none;
+            transition: ease 0.3s all;
+            background-image:url('//192.168.56.1:8080/wp-content/uploads/2019/03/website-header-binary-pineapple.jpg');
+            background-size:cover;
+            background-position:bottom;
     }
         .site-title {
             font-size:48px;
@@ -84,10 +89,17 @@
             .title-area {
                 padding-top:15px;
                 padding-bottom:0px;
+                background-color:$green;
+                background-image:none;
             }
             .site-title {
                 font-size:30px;
                 margin-bottom:0px;
+                
+                a {
+                    color:white;
+                }
+                
             }
             .site-description {
                 opacity:0;
