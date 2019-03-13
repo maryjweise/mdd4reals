@@ -1603,6 +1603,21 @@ th:first-child {
 	.home .site-inner .content .home-services #text-10 {
 		width: 30%;
 		text-align: center;
+		position: relative;
+	}
+	.home .site-inner .content .home-services #text-8 img,
+	.home .site-inner .content .home-services #text-9 img,
+	.home .site-inner .content .home-services #text-10 img {
+		max-width: 120px;
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.home .site-inner .content .home-services #text-8 .button,
+	.home .site-inner .content .home-services #text-9 .button,
+	.home .site-inner .content .home-services #text-10 .button {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
 	}
 	.home .site-inner .content .home-services #text-9 {
 		padding: 0 2%;

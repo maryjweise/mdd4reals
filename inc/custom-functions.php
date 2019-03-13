@@ -29,3 +29,6 @@ add_filter('genesis_footer_creds_text' , 'scratch_footer_creds_text' );
 
 // Add theme widget areas
   include_once( get_stylesheet_directory() . '/inc/widget-areas.php' );
+  
+  //disable auto paragraphs in widgets 
+  remove_filter('widget_text_content', 'wpautop');

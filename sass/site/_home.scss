@@ -82,6 +82,20 @@
                     #text-10{       //Cultivate
                         width:30%;
                         text-align:center;
+                        position:relative;
+                        
+                        img {
+                            max-width:120px;
+                            display:block;
+                            margin:0 auto 20px;
+                        }
+                        
+                        .button {
+                            position:absolute;
+                            left:50%;
+                            bottom:0;
+                        }
+                        
                     }
                     
                     #text-9 { 
